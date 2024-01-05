@@ -22,6 +22,7 @@ import Loader from '@/components/Loader';
 import { cn } from '@/lib/utils';
 import { Card, CardFooter } from '@/components/ui/card';
 import Image from 'next/image';
+import toast from 'react-hot-toast';
 
 
 const ImageGenerator = () => {
@@ -64,7 +65,7 @@ const ImageGenerator = () => {
                 console.error(error.type);  // e.g. 'invalid_request_error'
             } else {
                 // Non-API error
-                console.log(error);
+                toast.error('Something went wrong');
             }
         } finally {
             router.refresh();

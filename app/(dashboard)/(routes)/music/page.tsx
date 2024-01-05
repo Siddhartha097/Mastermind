@@ -17,6 +17,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import Empty from '@/components/Empty';
 import Loader from '@/components/Loader';
+import toast from 'react-hot-toast';
 
 const MusicGenerator = () => {
 
@@ -44,7 +45,7 @@ const MusicGenerator = () => {
             form.reset();
         } catch (error : any) {
             //open pro model
-            console.log(error);
+            toast.error('Something went wrong');
         } finally {
             router.refresh();
         }

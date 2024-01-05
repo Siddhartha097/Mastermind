@@ -21,6 +21,7 @@ import Loader from '@/components/Loader';
 import { cn } from '@/lib/utils';
 import UserAvatar from '@/components/UserAvatar';
 import BotAvatar from '@/components/BotAvatar';
+import toast from 'react-hot-toast';
 
 const Conversation = () => {
 
@@ -64,7 +65,7 @@ const Conversation = () => {
                 console.error(error.type);  // e.g. 'invalid_request_error'
             } else {
                 // Non-API error
-                console.log(error);
+                toast.error('Something went wrong');
             }
         } finally {
             router.refresh();

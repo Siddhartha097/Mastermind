@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Poppins, Montserrat } from 'next/font/google'
 import './globals.css'
 import { ClerkProvider } from '@clerk/nextjs';
+import ToasterProvider from '@/components/ToasterProvider';
 
 const inter = Inter({ subsets: ['latin'], weight: ['500'] })
 const poppins = Poppins({ subsets: ['latin'], weight: ['500'] })
@@ -21,6 +22,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={montserrat.className}>
+          <ToasterProvider />
           {children}
         </body>
       </html>
