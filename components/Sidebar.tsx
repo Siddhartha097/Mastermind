@@ -51,11 +51,11 @@ const routes = [
         href: '/code',
         color: 'text-emerald-600',
     },
-    {
-        label: 'Settings',
-        icon: Settings,
-        href: '/settings',
-    },
+    // {
+    //     label: 'Settings',
+    //     icon: Settings,
+    //     href: '/settings',
+    // },
 ];
 
 const Sidebar = () => {
